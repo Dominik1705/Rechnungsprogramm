@@ -30,29 +30,27 @@ Rechnungsprogramm/
 Support/Info.plist
 ```
 
-## Starten
+## Kostenlos testen
 
-1. Mac mit **Xcode 16** oder neuer.
+Alles hier ist kostenlos. Du brauchst nur einen Mac und deine normale Apple-ID, kein Abo.
+
+### Im Simulator
+
+1. **Xcode** kostenlos aus dem Mac App Store installieren.
 2. `Rechnungsprogramm.xcodeproj` öffnen.
-3. Target *Rechnungsprogramm* → *Signing & Capabilities* → dein **Team** wählen.
-4. Simulator oder iPhone auswählen → ▶︎ Run.
+3. Oben ein iPhone-Modell als Ziel wählen und auf ▶︎ klicken.
 
-## Veröffentlichung im App Store
+### Auf dem eigenen iPhone
 
-1. **Apple Developer Program** beitreten (99 €/Jahr): <https://developer.apple.com/programs/>
-2. Bundle-ID anpassen (aktuell `de.bujak.rechnungen`) – muss weltweit eindeutig sein.
-3. In **App Store Connect** eine neue App mit dieser Bundle-ID anlegen.
-4. App-Icon ersetzen: `Rechnungsprogramm/Assets.xcassets/AppIcon.appiconset/AppIcon.png` (1024 × 1024 px, ohne Transparenz). Das mitgelieferte Icon ist ein Platzhalter.
-5. In Xcode: *Product → Archive* → *Distribute App* → *App Store Connect*.
-6. In App Store Connect ausfüllen:
-   - Screenshots (iPhone 6,9" und 6,5", bei iPad-Unterstützung auch 13")
-   - Beschreibung, Keywords, Kategorie *Wirtschaft*
-   - **Datenschutzerklärung-URL** (Pflicht, auch wenn keine Daten erhoben werden)
-   - App-Datenschutz: „Keine Daten erfasst“
-   - Exportkonformität ist bereits gesetzt (`ITSAppUsesNonExemptEncryption = NO`)
-7. Zur Prüfung einreichen – üblicherweise 1–3 Tage.
+1. Xcode → *Settings → Accounts* → mit deiner Apple-ID anmelden.
+2. Target *Rechnungsprogramm* → *Signing & Capabilities* → Team *„(Dein Name) (Personal Team)“* wählen.
+3. Falls Xcode meckert, dass die Bundle-ID vergeben ist: sie auf etwas Eigenes ändern, z. B. `de.deinname.rechnungen`.
+4. iPhone per Kabel anschließen, auf dem iPhone *Einstellungen → Datenschutz & Sicherheit → Entwicklermodus* einschalten (Neustart).
+5. In Xcode das iPhone als Ziel wählen und ▶︎ klicken.
+6. Auf dem iPhone *Einstellungen → Allgemein → VPN & Geräteverwaltung* → deinem Entwicklerprofil vertrauen.
 
-Tipp: Vorher per **TestFlight** auf dem eigenen iPhone im Alltag testen.
+Bei der kostenlosen Variante läuft die App **7 Tage**. Danach einfach in Xcode wieder ▶︎ klicken,
+die gespeicherten Rechnungen und Kunden bleiben erhalten.
 
 ## Rechtliche Hinweise
 
